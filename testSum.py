@@ -17,12 +17,12 @@ print (getNumber())
 
 #this code here gets the digits from the program above and adds the digits
 def sumDigits (x):
-#variables with equations for getting each individual digit
-    ones = x%10
-    tens = x//10%10
-    hundreds = x//100
-#equation to add each of these individual digits together    
-    sum = ones + tens + hundreds
+    sum = 0
+    number = x
+#gets individual digits in the number until there are no more
+    while number > 0:
+        sum += number % 10
+        number //= 10
     return sum
 
 print (sumDigits(getNumber()))
